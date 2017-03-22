@@ -76,7 +76,7 @@ public class NewJFrame extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, backgroundLayout.createSequentialGroup()
                         .addGap(93, 93, 93)
                         .addComponent(Title)
-                        .addGap(0, 73, Short.MAX_VALUE))
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(backgroundLayout.createSequentialGroup()
                         .addGap(18, 18, 18)
                         .addGroup(backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -110,7 +110,7 @@ public class NewJFrame extends javax.swing.JFrame {
                 .addComponent(enter)
                 .addGap(18, 18, 18)
                 .addComponent(answer)
-                .addContainerGap(23, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jMenu1.setText("File");
@@ -137,10 +137,13 @@ public class NewJFrame extends javax.swing.JFrame {
 
     private void enterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enterActionPerformed
         // TODO add your handling code here:
+        //Creating variables
         String name = "";
         String bDay = "";
+        //Getting the names from the fields
         name = nameField.getText();
         bDay = bDayField.getText();
+        //Printing the response
         answer.setText(name + "'s birthday is on " + bDay);
         
     }//GEN-LAST:event_enterActionPerformed
