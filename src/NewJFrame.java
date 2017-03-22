@@ -34,6 +34,7 @@ public class NewJFrame extends javax.swing.JFrame {
         bDayField = new javax.swing.JTextField();
         enter = new javax.swing.JButton();
         answer = new javax.swing.JLabel();
+        Image = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
@@ -67,6 +68,8 @@ public class NewJFrame extends javax.swing.JFrame {
         answer.setForeground(new java.awt.Color(204, 204, 204));
         answer.setText("        ");
 
+        Image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/red-balloon-clipart-i2clipart-royalty-free-public-domain-clipart-XLq3Ub-clipart.png"))); // NOI18N
+
         javax.swing.GroupLayout backgroundLayout = new javax.swing.GroupLayout(background);
         background.setLayout(backgroundLayout);
         backgroundLayout.setHorizontalGroup(
@@ -90,7 +93,10 @@ public class NewJFrame extends javax.swing.JFrame {
                                     .addGroup(backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                         .addComponent(nameField, javax.swing.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)
                                         .addComponent(bDayField))))
-                            .addComponent(answer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                            .addGroup(backgroundLayout.createSequentialGroup()
+                                .addComponent(Image)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(answer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
                 .addGap(26, 26, 26))
         );
         backgroundLayout.setVerticalGroup(
@@ -106,10 +112,15 @@ public class NewJFrame extends javax.swing.JFrame {
                 .addGroup(backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(bDayLabel)
                     .addComponent(bDayField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(enter)
-                .addGap(18, 18, 18)
-                .addComponent(answer)
+                .addGroup(backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(backgroundLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(enter)
+                        .addGap(18, 18, 18)
+                        .addComponent(answer))
+                    .addGroup(backgroundLayout.createSequentialGroup()
+                        .addGap(28, 28, 28)
+                        .addComponent(Image)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -184,6 +195,7 @@ public class NewJFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Image;
     private javax.swing.JLabel Title;
     private javax.swing.JLabel answer;
     private javax.swing.JTextField bDayField;
